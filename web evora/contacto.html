@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto | ÉVORA</title>
+
+    <!-- Fuentes Oficiales -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+    <!-- ====================== NAVBAR ====================== -->
+    <header class="navbar">
+        <div class="logo-contenedor">
+            <span class="logo-texto">ÉVORA</span>
+            <span class="logo-subtexto">EXPERIENCES • EVENTS • DESTINATION WEDDINGS</span>
+        </div>
+
+        <nav class="menu-navegacion" aria-label="Navegación principal">
+            <ul>
+                <li><a href="index.html" class="enlace-menu">Inicio</a></li>
+                <li><a href="nosotros.html" class="enlace-menu">Nosotros</a></li>
+                <li><a href="bodas.html" class="enlace-menu">Bodas</a></li>
+                <li><a href="bodas-destino.html" class="enlace-menu">Bodas Destino</a></li>
+                <li><a href="eventos-corporativos.html" class="enlace-menu">Corporativos</a></li>
+                <li><a href="galeria.html" class="enlace-menu">Galería</a></li>
+                <li><a href="paquetes.html" class="enlace-menu">Paquetes</a></li>
+                <li><a href="contacto.html" class="enlace-menu activo">Contacto</a></li>
+            </ul>
+        </nav>
+
+        <a href="contacto.html" class="boton-primario">Cotizar Evento</a>
+    </header>
+
+    <!-- ====================== HERO ====================== -->
+    <section class="seccion-hero" style="padding-bottom: 40px;">
+        <div class="contenido-hero">
+            <span class="etiqueta-subtitulo">Atención Personalizada</span>
+            <h1 class="titulo-hero">Iniciemos tu Proyecto</h1>
+            <p class="eslogan-hero">Cada detalle, perfectamente planeado.</p>
+        </div>
+    </section>
+
+    <!-- ====================== CONTACTO + FORMULARIO ====================== -->
+    <section class="seccion-bloque">
+        <div class="grid-tarjetas" style="grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 40px;">
+
+            <!-- INFORMACIÓN DE CONTACTO -->
+            <article class="tarjeta-caracteristica" style="display: flex; flex-direction: column; justify-content: space-between;">
+                <div>
+                    <span class="etiqueta-subtitulo">Atención Directa</span>
+                    <h2 class="titulo-seccion" style="margin: 12px 0 24px; font-size: 2rem;">Hablemos de tu evento</h2>
+                    <p style="color: var(--color-slate); margin-bottom: 36px; line-height: 1.7;">
+                        Nuestro equipo de planners y especialistas está listo para asesorarte en la organización integral de tu próxima experiencia.
+                    </p>
+
+                    <div style="display: flex; flex-direction: column; gap: 24px;">
+                        <div>
+                            <strong style="color: var(--color-midnight); display: block; font-size: 0.95rem; margin-bottom: 4px;">📍 Ubicación Principal</strong>
+                            <span style="color: var(--color-slate); font-size: 0.95rem;">Av. La Encalada 1250, Santiago de Surco, Lima - Perú</span>
+                        </div>
+
+                        <div>
+                            <strong style="color: var(--color-midnight); display: block; font-size: 0.95rem; margin-bottom: 4px;">💬 WhatsApp Concierge</strong>
+                            <span style="color: var(--color-slate); font-size: 0.95rem;">+51 987 654 321</span>
+                        </div>
+
+                        <div>
+                            <strong style="color: var(--color-midnight); display: block; font-size: 0.95rem; margin-bottom: 4px;">✉️ Correo Electrónico</strong>
+                            <span style="color: var(--color-slate); font-size: 0.95rem;">contacto@evoraevents.pe</span>
+                        </div>
+
+                        <div>
+                            <strong style="color: var(--color-midnight); display: block; font-size: 0.95rem; margin-bottom: 4px;">🕒 Horario de Atención</strong>
+                            <span style="color: var(--color-slate); font-size: 0.95rem;">Lunes a Viernes: 9:00 AM - 7:00 PM</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="margin-top: 40px; padding-top: 24px; border-top: 1px solid rgba(100, 116, 139, 0.15);">
+                    <a href="https://wa.me/51987654321" target="_blank" rel="noopener noreferrer" class="boton-secundario" style="width: 100%; text-align: center;">
+                        Escribir a WhatsApp
+                    </a>
+                </div>
+            </article>
+
+            <!-- FORMULARIO -->
+            <article class="tarjeta-caracteristica">
+                <h3 style="font-family: var(--font-display); font-size: 1.7rem; margin-bottom: 24px; color: var(--color-midnight);">
+                    Solicitud de Cotización
+                </h3>
+
+                <form onsubmit="event.preventDefault(); alert('¡Gracias por comunicarte con ÉVORA! Un asesor se pondrá en contacto contigo muy pronto.');" 
+                      style="display: flex; flex-direction: column; gap: 20px;">
+
+                    <div>
+                        <label for="nombre-contacto" style="display: block; margin-bottom: 6px; font-weight: 500; font-size: 0.9rem;">Nombre Completo *</label>
+                        <input type="text" id="nombre-contacto" required placeholder="Ingresa tu nombre">
+                    </div>
+
+                    <div>
+                        <label for="email-contacto" style="display: block; margin-bottom: 6px; font-weight: 500; font-size: 0.9rem;">Correo Electrónico *</label>
+                        <input type="email" id="email-contacto" required placeholder="tu@email.com">
+                    </div>
+
+                    <div>
+                        <label for="tel-contacto" style="display: block; margin-bottom: 6px; font-weight: 500; font-size: 0.9rem;">Teléfono / WhatsApp *</label>
+                        <input type="tel" id="tel-contacto" required placeholder="+51 900 000 000">
+                    </div>
+
+                    <div>
+                        <label for="tipo-evento" style="display: block; margin-bottom: 6px; font-weight: 500; font-size: 0.9rem;">Tipo de Evento *</label>
+                        <select id="tipo-evento" required>
+                            <option value="">Selecciona una opción</option>
+                            <option value="boda">Boda</option>
+                            <option value="boda-destino">Boda de Destino</option>
+                            <option value="corporativo">Evento Corporativo</option>
+                            <option value="ocasion">Ocasión Especial</option>
+                            <option value="rsvp">Solo Servicio RSVP Digital</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label for="detalles-evento" style="display: block; margin-bottom: 6px; font-weight: 500; font-size: 0.9rem;">Detalles del Evento</label>
+                        <textarea id="detalles-evento" rows="4" placeholder="Cuéntanos la fecha estimada, número de invitados y requerimientos especiales..."></textarea>
+                    </div>
+
+                    <button type="submit" class="boton-primario" style="width: 100%; text-align: center; margin-top: 10px;">
+                        Enviar Solicitud
+                    </button>
+                </form>
+            </article>
+
+        </div>
+    </section>
+
+    <!-- ====================== FOOTER ====================== -->
+    <footer class="piedepagina-evora">
+        <div class="contenido-footer">
+            <div class="bloque-marca">
+                <h2>ÉVORA</h2>
+                <p class="descriptor-footer">EXPERIENCES • EVENTS • DESTINATION WEDDINGS</p>
+                <p class="eslogan-footer">Cada detalle, perfectamente planeado.</p>
+            </div>
+            <div class="bloque-derechos">
+                <p>© 2026 ÉVORA. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Botón WhatsApp -->
+    <a href="https://wa.me/51987654321" 
+       class="btn-whatsapp-flotante" 
+       target="_blank" 
+       rel="noopener noreferrer" 
+       aria-label="Contactar por WhatsApp">
+       💬
+    </a>
+
+</body>
+</html>

@@ -1,0 +1,544 @@
+/* ==========================================================================
+   ÉVORA - ARCHIVO MASTER DE ALTA COSTURA & SISTEMA EDITORIAL PREMIUM
+   Luxury Event Planning & Destination Weddings
+   ========================================================================== */
+
+/* TOKENS DE DISEÑO DE ULTRA LUJO (:root) */
+:root {
+  /* Paleta Oficial ÉVORA */
+  --color-midnight:      #0B1320; /* Azul Medianoche Imperial */
+  --color-midnight-rich: #121E33; /* Azul Noche Profundo */
+  --color-gold:          #D4B483; /* Champagne Gold Satinado */
+  --color-gold-light:    #F8F1E5; /* Reflejo Dorado Imperial */
+  --color-gold-dark:     #C09D66; /* Oro Pulido Vibrante */
+  --color-ivory:         #FAF8F4; /* Marfil Sedoso (Fondo Claro) */
+  --color-charcoal:      #1E293B; /* Carbón Elegante */
+  --color-slate:         #475569; /* Gris Ceniza de Alto Contraste */
+  --color-mist:          #F1F5F9; /* Niebla Satinada */
+
+  /* Tipografía Corporativa Editorial */
+  --font-display: 'Cormorant Garamond', Georgia, serif;
+  --font-body:    'Inter', -apple-system, sans-serif;
+
+  /* Sombras y Micro-interacciones Tridimensionales */
+  --shadow-editorial: 0px 20px 50px rgba(11, 19, 32, 0.12);
+  --shadow-hover:     0px 30px 70px rgba(212, 180, 131, 0.45);
+  --shadow-gold:      0px 14px 40px rgba(212, 180, 131, 0.55);
+  --transition:       400ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* RESET GLOBAL UNIVERSAL (CORRECTO CON '*') */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--color-ivory);
+    color: var(--color-charcoal);
+    font-family: var(--font-body);
+    line-height: 1.8;
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+}
+
+/* NAVEGACIÓN PRINCIPAL (CRISTAL Y FILETE DE ORO) */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 22px 64px;
+    background: rgba(250, 248, 244, 0.96);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1.5px solid var(--color-gold);
+    box-shadow: 0 8px 32px rgba(11, 19, 32, 0.08);
+    transition: var(--transition);
+}
+
+.logo-contenedor {
+    display: flex;
+    flex-direction: column;
+}
+
+.logo-texto {
+    font-family: var(--font-display);
+    font-size: 2.6rem;
+    font-weight: 700;
+    color: var(--color-midnight);
+    letter-spacing: 5px;
+    line-height: 0.9;
+}
+
+.logo-subtexto {
+    font-size: 0.65rem;
+    color: var(--color-gold-dark);
+    letter-spacing: 3.5px;
+    font-weight: 600;
+    margin-top: 6px;
+    text-transform: uppercase;
+}
+
+.menu-navegacion ul {
+    display: flex;
+    list-style: none;
+    gap: 28px;
+    align-items: center;
+}
+
+.enlace-menu {
+    text-decoration: none;
+    color: var(--color-charcoal);
+    font-weight: 600;
+    font-size: 0.92rem;
+    padding: 8px 0;
+    position: relative;
+    transition: var(--transition);
+    letter-spacing: 0.5px;
+}
+
+.enlace-menu::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--color-gold), transparent);
+    transition: var(--transition);
+    transform: translateX(-50%);
+}
+
+.enlace-menu:hover::after, 
+.enlace-menu.activo::after {
+    width: 100%;
+}
+
+.enlace-menu:hover, 
+.enlace-menu.activo {
+    color: var(--color-gold-dark);
+}
+
+/* SISTEMA DE BOTONES HIGH-END (ALTA VISIBILIDAD) */
+.boton-primario {
+    background: linear-gradient(135deg, var(--color-midnight) 0%, var(--color-midnight-rich) 100%);
+    color: #ffffff !important;
+    border: 1.5px solid var(--color-gold);
+    padding: 16px 36px;
+    border-radius: 10px;
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    cursor: pointer;
+    text-decoration: none;
+    transition: var(--transition);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 10px 28px rgba(11, 19, 32, 0.25);
+    position: relative;
+    overflow: hidden;
+}
+
+.boton-primario::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.35), transparent);
+    transition: 700ms;
+}
+
+.boton-primario:hover::before {
+    left: 100%;
+}
+
+.boton-primario:hover {
+    background: linear-gradient(135deg, var(--color-gold) 0%, var(--color-gold-dark) 100%);
+    border-color: var(--color-gold);
+    color: var(--color-midnight) !important;
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-gold);
+}
+
+.boton-secundario {
+    background-color: transparent;
+    color: var(--color-midnight) !important;
+    border: 1.5px solid var(--color-gold-dark);
+    padding: 16px 36px;
+    border-radius: 10px;
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    cursor: pointer;
+    text-decoration: none;
+    transition: var(--transition);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.boton-secundario:hover {
+    background-color: var(--color-gold);
+    color: var(--color-midnight) !important;
+    transform: translateY(-3px);
+    box-shadow: 0 12px 32px rgba(212, 180, 131, 0.4);
+}
+
+/* PORTADA HERO INMERSIVA */
+.seccion-hero {
+    padding: 130px 24px 110px 24px;
+    text-align: center;
+    background: 
+        radial-gradient(circle at 50% 25%, rgba(212, 180, 131, 0.32) 0%, transparent 65%),
+        linear-gradient(180deg, #FAF6EE 0%, var(--color-ivory) 100%);
+    width: 100%;
+    position: relative;
+    border-bottom: 1px solid rgba(212, 180, 131, 0.3);
+}
+
+.titulo-hero {
+    font-family: var(--font-display);
+    font-size: 5rem;
+    color: var(--color-midnight);
+    font-weight: 700;
+    line-height: 1.05;
+    margin-bottom: 20px;
+    letter-spacing: -1px;
+}
+
+.eslogan-hero {
+    font-family: var(--font-display);
+    font-size: 2.1rem;
+    color: var(--color-gold-dark);
+    font-style: italic;
+    margin-bottom: 28px;
+    letter-spacing: 1px;
+}
+
+.descripcion-hero {
+    font-size: 1.22rem;
+    color: var(--color-slate);
+    max-width: 800px;
+    margin: 0 auto 44px auto;
+}
+
+.panel-acciones {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* ESTRUCTURA GENERAL DE SECCIONES (FULL WIDTH RESPONSIVO) */
+.seccion-bloque, 
+.seccion-oscura, 
+.seccion-cta {
+    padding: 110px 8%;
+    width: 100%;
+    position: relative;
+}
+
+/* SECCIONES EN AZUL MEDIANOCHE IMPERIAL */
+.seccion-oscura, 
+.seccion-cta,
+.fondo-oscuro {
+    background: linear-gradient(135deg, var(--color-midnight) 0%, var(--color-midnight-rich) 100%) !important;
+    color: #ffffff !important;
+    border-top: 1.5px solid var(--color-gold);
+    border-bottom: 1.5px solid var(--color-gold);
+}
+
+/* REGLAS OBLIGATORIAS DE LEGIBILIDAD EN FONDOS OSCUROS */
+.seccion-oscura .titulo-seccion,
+.seccion-oscura h1, .seccion-oscura h2, .seccion-oscura h3,
+.seccion-cta h1, .seccion-cta h2, .seccion-cta h3,
+.fondo-oscuro h1, .fondo-oscuro h2, .fondo-oscuro h3 {
+    color: #ffffff !important;
+}
+
+.seccion-oscura p,
+.seccion-oscura span,
+.seccion-cta p,
+.fondo-oscuro p {
+    color: var(--color-gold-light) !important;
+}
+
+/* BOTONES SECUNDARIOS DENTRO DE SECCIONES OSCURAS */
+.seccion-oscura .boton-secundario,
+.seccion-cta .boton-secundario,
+.fondo-oscuro .boton-secundario {
+    color: #ffffff !important;
+    border-color: var(--color-gold) !important;
+}
+
+.seccion-oscura .boton-secundario:hover,
+.seccion-cta .boton-secundario:hover,
+.fondo-oscuro .boton-secundario:hover {
+    background-color: var(--color-gold) !important;
+    color: var(--color-midnight) !important;
+}
+
+.encabezado-seccion {
+    text-align: center;
+    margin-bottom: 64px;
+    position: relative;
+}
+
+.etiqueta-subtitulo {
+    font-size: 0.88rem;
+    text-transform: uppercase;
+    color: var(--color-gold-dark);
+    letter-spacing: 5px;
+    font-weight: 600;
+    display: block;
+    margin-bottom: 12px;
+}
+
+.seccion-oscura .etiqueta-subtitulo {
+    color: var(--color-gold) !important;
+}
+
+.titulo-seccion {
+    font-family: var(--font-display);
+    font-size: 3.5rem;
+    color: var(--color-midnight);
+    line-height: 1.12;
+    position: relative;
+    display: inline-block;
+}
+
+.titulo-seccion::after {
+    content: '';
+    display: block;
+    width: 100px;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, var(--color-gold), transparent);
+    margin: 20px auto 0 auto;
+    border-radius: 3px;
+}
+
+.bajada-seccion {
+    color: var(--color-slate);
+    font-size: 1.18rem;
+    margin-top: 18px;
+    max-width: 720px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* GRID DE TARJETAS ELEGANTE */
+.grid-tarjetas {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 36px;
+    max-width: 1320px;
+    margin: 0 auto;
+}
+
+.tarjeta-caracteristica, .tarjeta-servicio {
+    background-color: #ffffff;
+    padding: 48px 36px;
+    border-radius: 16px;
+    box-shadow: var(--shadow-editorial);
+    border: 1.5px solid rgba(212, 180, 131, 0.4);
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+    color: var(--color-charcoal);
+}
+
+.tarjeta-caracteristica::before, .tarjeta-servicio::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(90deg, var(--color-midnight), var(--color-gold), var(--color-midnight));
+    opacity: 0;
+    transition: var(--transition);
+}
+
+.tarjeta-caracteristica:hover::before, .tarjeta-servicio:hover::before {
+    opacity: 1;
+}
+
+.tarjeta-caracteristica:hover, .tarjeta-servicio:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-hover);
+    border-color: var(--color-gold);
+}
+
+.icono-tarjeta {
+    font-size: 3.2rem;
+    margin-bottom: 22px;
+    display: inline-block;
+    filter: drop-shadow(0 6px 14px rgba(212, 180, 131, 0.45));
+}
+
+.tarjeta-caracteristica h3, .tarjeta-servicio h3 {
+    font-family: var(--font-display);
+    font-size: 1.9rem;
+    color: var(--color-midnight) !important;
+    margin-bottom: 14px;
+    font-weight: 700;
+}
+
+.tarjeta-caracteristica p, .tarjeta-servicio p {
+    color: var(--color-slate) !important;
+    font-size: 1.02rem;
+    line-height: 1.75;
+}
+
+/* MARCO TIPO CUADRO DE ARTE EN TARJETAS DE SERVICIO DE GALERÍA */
+.imagen-tarjeta {
+    height: 230px;
+    background: linear-gradient(135deg, #0B1320 0%, #1A2942 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    margin-bottom: 26px;
+    border: 1.5px solid rgba(212, 180, 131, 0.5);
+    box-shadow: inset 0 0 30px rgba(0,0,0,0.4);
+    position: relative;
+    transition: var(--transition);
+}
+
+.imagen-tarjeta:hover {
+    transform: scale(1.02);
+}
+
+.etiqueta-imagen {
+    color: var(--color-gold) !important;
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    letter-spacing: 3.5px;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+/* SECCIONES DE FONDO CLARO SATINADO */
+.fondo-suave {
+    background: linear-gradient(180deg, var(--color-mist) 0%, #E6ECEF 100%) !important;
+    color: var(--color-midnight) !important;
+    border-top: 1px solid rgba(212, 180, 131, 0.3);
+    border-bottom: 1px solid rgba(212, 180, 131, 0.3);
+}
+
+.fondo-suave .titulo-seccion {
+    color: var(--color-midnight) !important;
+}
+
+.fondo-suave .bajada-seccion {
+    color: var(--color-slate) !important;
+}
+
+/* BOTÓN FLOTANTE CONCIERGE WHATSAPP */
+.btn-whatsapp-flotante {
+    position: fixed;
+    bottom: 36px;
+    right: 36px;
+    background: linear-gradient(135deg, #25D366 0%, #1DA851 100%);
+    color: #ffffff !important;
+    width: 66px;
+    height: 66px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 34px;
+    box-shadow: 0 14px 35px rgba(37, 211, 102, 0.45);
+    text-decoration: none;
+    z-index: 9999;
+    transition: var(--transition);
+}
+
+.btn-whatsapp-flotante:hover {
+    transform: scale(1.15) rotate(10deg);
+    box-shadow: 0 18px 45px rgba(37, 211, 102, 0.65);
+}
+
+/* PIE DE PÁGINA IMPERIAL */
+.piedepagina-evora {
+    background: linear-gradient(180deg, #0B1320 0%, #03060C 100%);
+    color: #ffffff !important;
+    padding: 110px 24px 52px 24px;
+    text-align: center;
+    border-top: 2.5px solid var(--color-gold);
+}
+
+.bloque-marca h2 {
+    font-family: var(--font-display);
+    font-size: 3.2rem;
+    letter-spacing: 8px;
+    color: #ffffff !important;
+}
+
+.descriptor-footer {
+    font-size: 0.82rem;
+    color: var(--color-gold) !important;
+    letter-spacing: 4.5px;
+    margin-top: 12px;
+    text-transform: uppercase;
+}
+
+.eslogan-footer {
+    font-family: var(--font-display);
+    font-style: italic;
+    color: var(--color-gold-light) !important;
+    margin-top: 22px;
+    font-size: 1.3rem;
+}
+
+.bloque-derechos {
+    margin-top: 64px;
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+    padding-top: 36px;
+    font-size: 0.92rem;
+    color: var(--color-slate) !important;
+}
+
+/* RESPONSIVO DE ALTA PRECISIÓN MÓVIL */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        gap: 20px;
+        padding: 22px 20px;
+    }
+
+    .menu-navegacion ul {
+        gap: 14px 20px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .titulo-hero {
+        font-size: 3.4rem;
+    }
+
+    .seccion-bloque, .seccion-oscura, .seccion-cta {
+        padding: 70px 20px;
+    }
+
+    .grid-tarjetas {
+        grid-template-columns: 1fr;
+    }
+}

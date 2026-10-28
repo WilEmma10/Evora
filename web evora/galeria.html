@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galería | ÉVORA</title>
+
+    <!-- Fuentes Oficiales -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+    <!-- ====================== NAVBAR ====================== -->
+    <header class="navbar">
+        <div class="logo-contenedor">
+            <span class="logo-texto">ÉVORA</span>
+            <span class="logo-subtexto">EXPERIENCES • EVENTS • DESTINATION WEDDINGS</span>
+        </div>
+
+        <nav class="menu-navegacion" aria-label="Navegación principal">
+            <ul>
+                <li><a href="index.html" class="enlace-menu">Inicio</a></li>
+                <li><a href="nosotros.html" class="enlace-menu">Nosotros</a></li>
+                <li><a href="bodas.html" class="enlace-menu">Bodas</a></li>
+                <li><a href="bodas-destino.html" class="enlace-menu">Bodas Destino</a></li>
+                <li><a href="eventos-corporativos.html" class="enlace-menu">Corporativos</a></li>
+                <li><a href="galeria.html" class="enlace-menu activo">Galería</a></li>
+                <li><a href="paquetes.html" class="enlace-menu">Paquetes</a></li>
+                <li><a href="contacto.html" class="enlace-menu">Contacto</a></li>
+            </ul>
+        </nav>
+
+        <a href="contacto.html" class="boton-primario">Cotizar Evento</a>
+    </header>
+
+    <!-- ====================== HERO ====================== -->
+    <section class="seccion-hero" style="padding-bottom: 40px;">
+        <div class="contenido-hero">
+            <span class="etiqueta-subtitulo">Portafolio Visual</span>
+            <h1 class="titulo-hero">Nuestra Galería</h1>
+            <p class="eslogan-hero">Instantáneas de momentos inolvidables diseñados por ÉVORA.</p>
+        </div>
+    </section>
+
+    <!-- ====================== GALERÍA ====================== -->
+    <section class="seccion-bloque">
+        <div class="encabezado-seccion">
+            <span class="etiqueta-subtitulo">Proyectos Destacados</span>
+            <h2 class="titulo-seccion">Elegancia en cada detalle</h2>
+            <p class="bajada-seccion">
+                Una muestra visual de nuestras bodas, producciones corporativas y celebraciones privadas.
+            </p>
+        </div>
+
+        <!-- Filtros (preparados para futuro JS) -->
+        <div style="display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; margin-bottom: 48px;">
+            <button class="boton-secundario" style="padding: 10px 22px; font-size: 0.9rem;">Todos</button>
+            <button class="boton-secundario" style="padding: 10px 22px; font-size: 0.9rem;">Bodas</button>
+            <button class="boton-secundario" style="padding: 10px 22px; font-size: 0.9rem;">Bodas Destino</button>
+            <button class="boton-secundario" style="padding: 10px 22px; font-size: 0.9rem;">Corporativos</button>
+            <button class="boton-secundario" style="padding: 10px 22px; font-size: 0.9rem;">Celebraciones</button>
+        </div>
+
+        <div class="grid-tarjetas">
+
+            <article class="tarjeta-servicio">
+                <div class="imagen-tarjeta">
+                    <span class="etiqueta-imagen">Destination Wedding</span>
+                </div>
+                <div class="cuerpo-tarjeta">
+                    <h3>Boda en Valle Sagrado</h3>
+                    <p>Producción integral al aire libre combinando elementos autóctonos y elegancia contemporánea.</p>
+                </div>
+            </article>
+
+            <article class="tarjeta-servicio">
+                <div class="imagen-tarjeta">
+                    <span class="etiqueta-imagen">Corporate Gala</span>
+                </div>
+                <div class="cuerpo-tarjeta">
+                    <h3>Gala Anual de Innovación</h3>
+                    <p>Montaje audiovisual de alto impacto, iluminación arquitectónica y experiencia VIP.</p>
+                </div>
+            </article>
+
+            <article class="tarjeta-servicio">
+                <div class="imagen-tarjeta">
+                    <span class="etiqueta-imagen">Coastal Wedding</span>
+                </div>
+                <div class="cuerpo-tarjeta">
+                    <h3>Boda de Playa en Paracas</h3>
+                    <p>Celebración costera con arquitectura efímera, tonos marfil y ambientación marina.</p>
+                </div>
+            </article>
+
+            <article class="tarjeta-servicio">
+                <div class="imagen-tarjeta">
+                    <span class="etiqueta-imagen">Private Celebration</span>
+                </div>
+                <div class="cuerpo-tarjeta">
+                    <h3>Cena de Aniversario Exclusiva</h3>
+                    <p>Estilismo de mesa en champagne gold, flores seleccionadas y gastronomía de autor.</p>
+                </div>
+            </article>
+
+            <article class="tarjeta-servicio">
+                <div class="imagen-tarjeta">
+                    <span class="etiqueta-imagen">Brand Launch</span>
+                </div>
+                <div class="cuerpo-tarjeta">
+                    <h3>Lanzamiento Tecnológico B2B</h3>
+                    <p>Escenografía interactiva con acreditación QR e integración de identidad corporativa.</p>
+                </div>
+            </article>
+
+            <article class="tarjeta-servicio">
+                <div class="imagen-tarjeta">
+                    <span class="etiqueta-imagen">Luxury Reception</span>
+                </div>
+                <div class="cuerpo-tarjeta">
+                    <h3>Recepción Nocturna en Casona</h3>
+                    <p>Iluminación cálida, arreglos florales colgantes y coctelería personalizada.</p>
+                </div>
+            </article>
+
+        </div>
+    </section>
+
+    <!-- ====================== CTA FINAL ====================== -->
+    <section class="seccion-bloque" style="text-align: center;">
+        <div class="encabezado-seccion">
+            <span class="etiqueta-subtitulo">Tu momento también puede estar aquí</span>
+            <h2 class="titulo-seccion">¿Listo para crear tu propia historia?</h2>
+            <p class="bajada-seccion">
+                Cada celebración que diseñamos es única. Cuéntanos la tuya y hagamos que sea inolvidable.
+            </p>
+        </div>
+        <div class="panel-acciones">
+            <a href="contacto.html" class="boton-primario">Solicitar Cotización</a>
+            <a href="https://wa.me/51987654321" class="boton-secundario" target="_blank">Hablar por WhatsApp</a>
+        </div>
+    </section>
+
+    <!-- ====================== FOOTER ====================== -->
+    <footer class="piedepagina-evora">
+        <div class="contenido-footer">
+            <div class="bloque-marca">
+                <h2>ÉVORA</h2>
+                <p class="descriptor-footer">EXPERIENCES • EVENTS • DESTINATION WEDDINGS</p>
+                <p class="eslogan-footer">Cada detalle, perfectamente planeado.</p>
+            </div>
+            <div class="bloque-derechos">
+                <p>© 2026 ÉVORA. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Botón WhatsApp -->
+    <a href="https://wa.me/51987654321" 
+       class="btn-whatsapp-flotante" 
+       target="_blank" 
+       rel="noopener noreferrer" 
+       aria-label="Contactar por WhatsApp">
+       💬
+    </a>
+
+</body>
+</html>

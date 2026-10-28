@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RSVP Digital | ÉVORA</title>
+
+    <!-- Fuentes Oficiales -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+    <!-- ====================== NAVBAR ====================== -->
+    <header class="navbar">
+        <div class="logo-contenedor">
+            <span class="logo-texto">ÉVORA</span>
+            <span class="logo-subtexto">EXPERIENCES • EVENTS • DESTINATION WEDDINGS</span>
+        </div>
+
+        <nav class="menu-navegacion" aria-label="Navegación principal">
+            <ul>
+                <li><a href="index.html" class="enlace-menu">Inicio</a></li>
+                <li><a href="nosotros.html" class="enlace-menu">Nosotros</a></li>
+                <li><a href="bodas.html" class="enlace-menu">Bodas</a></li>
+                <li><a href="bodas-destino.html" class="enlace-menu">Bodas Destino</a></li>
+                <li><a href="eventos-corporativos.html" class="enlace-menu">Corporativos</a></li>
+                <li><a href="galeria.html" class="enlace-menu">Galería</a></li>
+                <li><a href="paquetes.html" class="enlace-menu">Paquetes</a></li>
+                <li><a href="contacto.html" class="enlace-menu">Contacto</a></li>
+            </ul>
+        </nav>
+
+        <a href="contacto.html" class="boton-primario">Cotizar Evento</a>
+    </header>
+
+    <!-- ====================== HERO ====================== -->
+    <section class="seccion-hero" style="padding-bottom: 40px;">
+        <div class="contenido-hero">
+            <span class="etiqueta-subtitulo">Plataforma Tecnológica</span>
+            <h1 class="titulo-hero">Gestión de Invitados & RSVP</h1>
+            <p class="eslogan-hero">Tecnología que simplifica cada detalle.</p>
+        </div>
+    </section>
+
+    <!-- ====================== CARACTERÍSTICAS ====================== -->
+    <section class="seccion-bloque">
+        <div class="encabezado-seccion">
+            <span class="etiqueta-subtitulo">Innovación ÉVORA</span>
+            <h2 class="titulo-seccion">Control total en tiempo real</h2>
+            <p class="bajada-seccion">
+                Una suite digital completa para coordinar la confirmación y el ingreso de tus invitados con precisión y elegancia.
+            </p>
+        </div>
+
+        <div class="grid-tarjetas">
+
+            <article class="tarjeta-caracteristica">
+                <div class="icono-tarjeta">💌</div>
+                <h3>Invitaciones Interactivas</h3>
+                <p>Diseño editorial exclusivo digitalizado, accesible desde cualquier dispositivo móvil o computadora.</p>
+            </article>
+
+            <article class="tarjeta-caracteristica">
+                <div class="icono-tarjeta">⚡</div>
+                <h3>Confirmación Automática</h3>
+                <p>Respuestas e itinerarios integrados con actualización instantánea en el panel de control del anfitrión.</p>
+            </article>
+
+            <article class="tarjeta-caracteristica">
+                <div class="icono-tarjeta">👥</div>
+                <h3>Gestión de Acompañantes</h3>
+                <p>Control preciso de cupos y registro de restricciones alimentarias o requerimientos especiales.</p>
+            </article>
+
+            <article class="tarjeta-caracteristica">
+                <div class="icono-tarjeta">🍽️</div>
+                <h3>Asignación de Mesas</h3>
+                <p>Visualización del plano de recepción para ubicar a cada asistente según tus preferencias.</p>
+            </article>
+
+            <article class="tarjeta-caracteristica">
+                <div class="icono-tarjeta">🎟️</div>
+                <h3>Pases de Acceso por QR</h3>
+                <p>Código QR único por invitado que garantiza un Check-In fluido y sin colas en la entrada.</p>
+            </article>
+
+            <article class="tarjeta-caracteristica">
+                <div class="icono-tarjeta">📊</div>
+                <h3>Reportes & Estadísticas</h3>
+                <p>Métricas precisas de asistencia para optimizar catering, souvenirs y logística general.</p>
+            </article>
+
+        </div>
+    </section>
+
+    <!-- ====================== DEMO INTERACTIVA ====================== -->
+    <section class="seccion-bloque fondo-suave">
+        <div class="encabezado-seccion">
+            <span class="etiqueta-subtitulo">Demostración</span>
+            <h2 class="titulo-seccion">Prueba la confirmación de asistencia</h2>
+            <p class="bajada-seccion">Experimenta cómo funciona nuestro sistema RSVP de forma sencilla e intuitiva.</p>
+        </div>
+
+        <article class="tarjeta-caracteristica" style="max-width: 580px; margin: 0 auto; padding: 48px 40px;">
+            <form onsubmit="event.preventDefault(); alert('¡Gracias por probar la demo del sistema RSVP de ÉVORA!');" 
+                  style="display: flex; flex-direction: column; gap: 22px;">
+
+                <div>
+                    <label for="codigo-invitacion" style="display: block; margin-bottom: 8px; font-weight: 500; font-size: 0.92rem;">Código de Invitación</label>
+                    <input type="text" id="codigo-invitacion" placeholder="Ej. EVORA-2026">
+                </div>
+
+                <div>
+                    <label for="confirmacion-asistencia" style="display: block; margin-bottom: 8px; font-weight: 500; font-size: 0.92rem;">¿Confirmas tu asistencia?</label>
+                    <select id="confirmacion-asistencia">
+                        <option value="si">Sí, asistiré con gusto</option>
+                        <option value="no">Lamentablemente no podré asistir</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="num-acompanantes" style="display: block; margin-bottom: 8px; font-weight: 500; font-size: 0.92rem;">Número de Acompañantes</label>
+                    <input type="number" id="num-acompanantes" min="0" max="4" value="0">
+                </div>
+
+                <button type="submit" class="boton-primario" style="width: 100%; text-align: center; margin-top: 8px;">
+                    Confirmar en la Demo
+                </button>
+            </form>
+        </article>
+    </section>
+
+    <!-- ====================== CTA FINAL ====================== -->
+    <section class="seccion-bloque" style="text-align: center;">
+        <div class="encabezado-seccion">
+            <span class="etiqueta-subtitulo">Tecnología al servicio de tu evento</span>
+            <h2 class="titulo-seccion">¿Quieres incluir RSVP Digital en tu celebración?</h2>
+            <p class="bajada-seccion">
+                Disponible en los paquetes Signature y Luxury, o como servicio independiente.
+            </p>
+        </div>
+        <div class="panel-acciones">
+            <a href="contacto.html" class="boton-primario">Solicitar información</a>
+            <a href="paquetes.html" class="boton-secundario">Ver Paquetes</a>
+        </div>
+    </section>
+
+    <!-- ====================== FOOTER ====================== -->
+    <footer class="piedepagina-evora">
+        <div class="contenido-footer">
+            <div class="bloque-marca">
+                <h2>ÉVORA</h2>
+                <p class="descriptor-footer">EXPERIENCES • EVENTS • DESTINATION WEDDINGS</p>
+                <p class="eslogan-footer">Cada detalle, perfectamente planeado.</p>
+            </div>
+            <div class="bloque-derechos">
+                <p>© 2026 ÉVORA. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Botón WhatsApp -->
+    <a href="https://wa.me/51987654321" 
+       class="btn-whatsapp-flotante" 
+       target="_blank" 
+       rel="noopener noreferrer" 
+       aria-label="Contactar por WhatsApp">
+       💬
+    </a>
+
+</body>
+</html>
